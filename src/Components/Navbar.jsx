@@ -4,10 +4,9 @@ import { NavLink, useNavigate } from 'react-router-dom';
 const Navbar = () => {
     const navigate = useNavigate()
     return (
-        <div className='flex px-13 py-10 justify-between mt-6'>
+        <div className='flex px-4 py-8 justify-between bg-zinc-200'>
             
-            <h1>Tasty Meal Plans</h1>
-            <NavLink to="/">Home</NavLink>
+            <NavLink to="/" className="hover:text-blue-500 px-3">Home</NavLink>
             <div className='flex gap-5'>
                 <NavLink to='/about' className='hover:text-blue-500'>About</NavLink>
                 <NavLink to='/contact' className='hover:text-blue-500'>Contact</NavLink>
@@ -15,8 +14,8 @@ const Navbar = () => {
             </div>
 
             <div>
-                <button className='outline-none'>Login</button>
-                <button>Signup</button>
+                <button className= 'outline-none rounded-lg px-4 py-1 hover:text-blue-500'>Login</button>
+                <button className= 'outline-none rounded-lg px-4 py-1 hover:text-blue-500'>Signup</button>
             </div>
         </div>
     );
