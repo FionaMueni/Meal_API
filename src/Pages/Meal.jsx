@@ -1,5 +1,7 @@
 import React, {useState, useEffect} from 'react';
 import List from '../Components/List';
+import Navbar from '../Components/Navbar';
+
 
 
 const Meal = () => {
@@ -62,6 +64,7 @@ useEffect(()=>{
 
     return (
         <div>
+        <Navbar/>
         <div>
         <select onChange={((event)=>newSelectedCategory(event.target.value))}>
             <option value="">All Categories</option>
