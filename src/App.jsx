@@ -4,6 +4,7 @@ import Navbar from './Components/Navbar'
 import chineseIcon from './assets/chineseIcon.png'
 import background_svg from './assets/background.svg'
 import cookingImage from './assets/cooking.jpg'
+import Footer from './Components/Footer'
 
 
 
@@ -21,6 +22,7 @@ function App() {
   <div>
       <img src={cookingImage} className='w-full mt-0' alt=""/>
     </div>
+    <Footer/>
    </div>
   )
 }
