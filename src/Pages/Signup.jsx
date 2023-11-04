@@ -3,6 +3,7 @@ import Navbar from '../Components/Navbar';
 import { NavLink } from 'react-router-dom';
 import chineseIcon from './../assets/Chineseicon.png'
 import signupIcon from './../assets/Signup.svg'
+import Footer from '../Components/Footer';
 
 const Signup = () => {
     return (
@@ -43,7 +44,7 @@ const Signup = () => {
             <img src={signupIcon} className='w-2/5' alt="" />
 
            </div>
-           
+           <Footer/>
           </div>
             
    

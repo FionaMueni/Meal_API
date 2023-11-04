@@ -4,6 +4,7 @@ import App from './App.jsx'
 import './index.css'
 import { Route, Routes, BrowserRouter } from 'react-router-dom'
 import { MantineProvider } from '@mantine/core'
+// import { Notifications } from '@mantine/notifications'
 import Meal from './Pages/Meal.jsx'
 import Login from './Pages/Login.jsx'
 import Signup from './Pages/Signup.jsx'
@@ -14,6 +15,7 @@ import Signup from './Pages/Signup.jsx'
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <MantineProvider>
+    {/* <Notification/> */}
       <BrowserRouter>
       <Routes>
         <Route path='/' exact='true' element={<App/>}/>

@@ -1,6 +1,7 @@
 import React, {useState, useEffect} from 'react';
 import List from '../Components/List';
 import Navbar from '../Components/Navbar';
+import Footer from '../Components/Footer';
 
 
 
@@ -46,6 +47,7 @@ useEffect(()=>{
 
 }, [search])
 
+
 useEffect(()=>{
     if (selectedCategory === ""){
         setNewData(data)
@@ -65,9 +67,9 @@ useEffect(()=>{
     return (
         <div>
         <Navbar/>
-        <div>
-        <select onChange={((event)=>newSelectedCategory(event.target.value))}>
-            <option value="">All Categories</option>
+        <div className='flex justify-end items-end px-4 py-8'>
+        <select className='border-2 border-black px-3 py-2 rounded-lg ' onChange={((event)=>newSelectedCategory(event.target.value))}>
+            <option value="" >All Categories</option>
             {newCategory && newCategory.map((item, index)=>{
                 return(
                     <option value={item} key={index}>{item}</option>
@@ -77,11 +79,11 @@ useEffect(()=>{
             
         </select>
 
-        <input type="text" placeholder="search" className='flex w-52 mt-4 outline-none border-2 border-black text-sm items-end rounded-lg px-4 py-2 ' onChange={(event)=>setSearch(event.target.value)}/>
+        <input type="text" placeholder="search" className='flex w-52 mt-4 justify-end outline-none border-2 border-black text-sm items-end rounded-lg mx-7 px-3 py-2 ' onChange={(event)=>setSearch(event.target.value)}/>
         </div>
         
 
-        <div>
+        <div className='grid grid-cols-4 items-center mt-10 bg gap-3 px-6' >
      {newData && newData.map((item, index)=>{
     console.log(item)
     return (
@@ -90,7 +92,7 @@ useEffect(()=>{
 })}
         </div>
 
-        
+        <Footer/>
             
         </div>
     );
